@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from '../src/Components/header'
+import Tabs from '../src/Components/tabs'
+import MenuDrawer from '../src/Components/menuDrawers'
+import VechileCarousel from '../src/Components/vehiclesCarousel'
+import NavBar from '../src/Components/navbar'
+import VehicleContainer from './Components/VehicleContainer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import BatteryFinder from './Components/batteryFinder';
+
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import color from '@material-ui/core/colors/amber'
+
+class Component extends React.Component {
+  
+    render(){
+      return(
+        <div>
+           <Header></Header>
+          <Tabs></Tabs>
+          <NavBar></NavBar>
+          <VehicleContainer></VehicleContainer>
+          <BatteryFinder></BatteryFinder>
+        </div>
+      )
+    }
 }
 
-export default App;
+
+export default Component
